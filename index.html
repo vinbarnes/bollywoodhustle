@@ -4,29 +4,49 @@
     <title>Bollywood Hustle</title>
     <style type="text/css" media="screen">
       * { margin:0; padding:0;}
-      body {font-family:Helvetica,Arial,sans-serif;font-size:16px;min-width:760px;}
+      body {font-family:Helvetica,Arial,sans-serif;font-size:16px;min-width:760px;background-color:#191919;}
       div#container {margin-left:5%;margin-right:5%;text-align:center;margin-top:25%;}
       h1#title {font-size:5em;}
       p#timer {margin-top:100px;font-size:3em;}
     </style>
     <script type="text/javascript" charset="utf-8" src="jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="jquery.color.js"></script>
     <script type="text/javascript" charset="utf-8">
       $(document).ready(function() {  
 
-       $('h1#title').animate( { color: hue }, 1000);  
-
+       spectrum();
+       
        function spectrum(){  
           var hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';  
-          $('#div').animate( { backgroundColor: hue }, 1000);  
+          $('h1#title').animate( { color: hue }, 1000);  
           spectrum();  
        }  
 
+       function disappear(){
+         
+       }
       });
     </script>
   </head>
   <body>
     <div id="container">
-      <h1 id="title">Bollywood Hustle</h1>
+      <h1 id="title">
+        <span id="1">B</span>
+        <span id="2">o</span>
+        <span id="3">l</span>
+        <span id="4">l</span>
+        <span id="5">y</span>
+        <span id="6">w</span>
+        <span id="7">o</span>
+        <span id="8">o</span>
+        <span id="9">d</span>
+        &nbsp;
+        <span id="10">H</span>
+        <span id="11">u</span>
+        <span id="12">s</span>
+        <span id="13">t</span>
+        <span id="14">l</span>
+        <span id="15">e</span>
       <p id="timer">
         5 days left
       </p>
