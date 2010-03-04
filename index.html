@@ -4,11 +4,25 @@
     <title>Bollywood Hustle</title>
     <style type="text/css" media="screen">
       * { margin:0; padding:0;}
-      body {font-family:Helvetica,Arial,sans-serif;font-size:16px;}
+      body {font-family:Helvetica,Arial,sans-serif;font-size:16px;min-width:760px;}
       div#container {margin-left:5%;margin-right:5%;text-align:center;margin-top:25%;}
       h1#title {font-size:5em;}
       p#timer {margin-top:100px;font-size:3em;}
     </style>
+    <script type="text/javascript" charset="utf-8" src="jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      $(document).ready(function() {  
+
+       $('h1#title').animate( { color: hue }, 1000);  
+
+       function spectrum(){  
+          var hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';  
+          $('#div').animate( { backgroundColor: hue }, 1000);  
+          spectrum();  
+       }  
+
+      });
+    </script>
   </head>
   <body>
     <div id="container">
